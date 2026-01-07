@@ -1,11 +1,11 @@
 # Histogram Automation for Statistical Analysis
 A Python tool that automates the creation of histograms and frequency distribution tables from datasets, following theoretical statistical analysis methodology.
 ## Live Coding Session
-Watch the full development process: [YouTube Link - Coming Soon]
+Watch the full development process: [[Video](https://youtu.be/q8hvJiqmIGY?si=vNVU0SRqgL_fPXx_)]
 ## Academic Context
 **Institution:** Faculty of Computer and Information Sciences, Ain Shams University  
 **Course:** CIS 240 - Statistical Analysis  
-**Special Thanks:** Dr. Diaa for the excellent teaching and guidance throughout this course
+**Special Thanks:** Dr. Ghada Hamed, Dr. Fatma Naguib, Dr. Diaa and all TAs for the excellent teaching and guidance throughout this course
 ## Features
 - Automatically calculates statistical measures (min, max, range, sample size)
 - Determines optimal number of subintervals using √n method
