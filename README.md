@@ -44,9 +44,9 @@ The dataset should be a CSV file with comma-separated numerical values:
 - Console output with all statistical measures
 - Interactive matplotlib window displaying:
 - Frequency distribution table (left)
-![table_pic](attachments/table)
+![table_pic]('Histogram Automation'/attachments/table)
 - Histogram visualization (right)
-![histogram_pic](attachments/histogram)
+![histogram_pic]('Histogram Automation'/attachments/histogram)
 ## Example Output
 The tool generates a comprehensive view with:
 - Intervals column showing data ranges
