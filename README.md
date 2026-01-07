@@ -46,7 +46,7 @@ The dataset should be a CSV file with comma-separated numerical values:
 - Frequency distribution table (left)
 ![table_pic](/attachments/table.png)
 - Histogram visualization (right)
-![histogram_pic]('Histogram-Automation'/attachments/histogram.png)
+![histogram_pic](/attachments/histogram.png)
 ## Example Output
 The tool generates a comprehensive view with:
 - Intervals column showing data ranges
