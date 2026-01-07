@@ -43,10 +43,14 @@ The dataset should be a CSV file with comma-separated numerical values:
 ## Output
 - Console output with all statistical measures
 - Interactive matplotlib window displaying:
-- Frequency distribution table (left)
+- Frequency distribution table (left):
+
 ![table_pic](/attachments/table.png)
-- Histogram visualization (right)
+
+- Histogram visualization (right):
+
 ![histogram_pic](/attachments/histogram.png)
+
 ## Example Output
 The tool generates a comprehensive view with:
 - Intervals column showing data ranges
