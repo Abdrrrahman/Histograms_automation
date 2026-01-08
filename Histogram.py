@@ -6,7 +6,8 @@ def calculate_freq(num1, num2) -> tuple:
     for element in dataset:
         if(element < num2 and element >= num1):
             frequency += 1
-    return frequency, round(frequency/sample_size, precision)
+    rel_freq = round(frequency/sample_size, 3)
+    return frequency, f'{rel_freq*100:.1f}%'
 
 def print_basic_data():
     print(f'Minimum is\t\t\t\t{mn}', end='\n')
@@ -21,7 +22,7 @@ def print_basic_data():
     print(f'Frequencies is\t\t\t{frequencies}', end='\n')
 
 
-file = open("dataset_1.csv", "rt")
+file = open("dataset_5.csv", "rt")
 str_list = file.read().split(',')
 dataset = []
 for i in range(0,len(str_list)):
@@ -39,8 +40,8 @@ subintervals_number = math.ceil(math.sqrt(sample_size))
 precision = 0
 for element in dataset:
     if element != int(element):
-        precision = len(str(dataset[0]).split('.')[1])
-        break
+        decimal_places = len(str(element).split('.')[1])
+        precision = max(precision, decimal_places)
 
 cell_width = round(rng/subintervals_number,precision)
 print(str(dataset[0]).split('.'))
@@ -59,7 +60,7 @@ print_basic_data()
 # Matplotlib code
 
 # table code
-fig, (tablo, histo) = plt.subplots(1, 2, sharey=True, tight_layout=True)
+fig, (tablo, histo) = plt.subplots(1, 2, tight_layout=True)
 columns = ['Intervals','Frequency', 'Relative Frequency']
 rows = []
 for i in range(0,subintervals_number):
@@ -74,15 +75,16 @@ table = tablo.table(cellText = rows, colLabels = columns, colLoc='center', loc='
 table.scale(1.5, 2.5)
 table.auto_set_font_size(False)
 table.set_fontsize(15)
+tablo.set_title('Frequency Distribution Table')
 
 # Histogram code
 
 histo.hist(dataset, bins = subintervals_number, color='skyblue', edgecolor='black')
-plt.xlabel("Interval")
-plt.ylabel("Frequency")
-histo.grid(axis='x', linestyle=':', alpha=0.7)
+histo.set_xlabel("Value Intervals")
+histo.set_ylabel("Frequency")
+histo.set_title("Histogram")
 
-plt.title("R.F. Table and Histogram")
+plt.suptitle("Frequency Distribution Analysis")
 plt.show()
 
 # Forgot to close it at the video
